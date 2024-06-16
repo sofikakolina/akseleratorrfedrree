@@ -1,50 +1,49 @@
-// components/Sidebar.tsx
 import React from 'react';
 
 const Sidebar: React.FC = () => {
   return (
-    <aside className="w-1/4 bg-gray-100 p-4">
-      <h2 className="text-lg font-bold mb-4">Filters</h2>
+    <aside className="w-1/4 bg-gray-100 p-4 rounded-lg">
+      <h2 className="text-lg font-bold mb-4">Фильтры</h2>
       
-      {/* Job Types */}
+      {/* Типы работ */}
       <div className="mb-4">
-        <h3 className="font-semibold">Job Types</h3>
+        <h3 className="font-semibold">Типы работ</h3>
         <label className="block">
-          <input type="checkbox" /> Evening
+          <input type="checkbox" /> Вечерняя
         </label>
         <label className="block">
-          <input type="checkbox" /> Part-time
+          <input type="checkbox" /> Неполный рабочий день
         </label>
         <label className="block">
-          <input type="checkbox" /> Full-time
+          <input type="checkbox" /> Полный рабочий день
         </label>
         <label className="block">
-          <input type="checkbox" /> Freelance
+          <input type="checkbox" /> Фриланс
         </label>
         <label className="block">
-          <input type="checkbox" /> Internship
+          <input type="checkbox" /> Стажировка
         </label>
       </div>
 
-      {/* Experience Level */}
+      {/* Уровень опыта */}
       <div className="mb-4">
-        <h3 className="font-semibold">Experience Level</h3>
+        <h3 className="font-semibold">Уровень опыта</h3>
         <label className="block">
-          <input type="checkbox" /> Junior
+          <input type="checkbox" /> Начальный
         </label>
         <label className="block">
-          <input type="checkbox" /> Mid-level
+          <input type="checkbox" /> Средний
         </label>
         <label className="block">
-          <input type="checkbox" /> Senior
+          <input type="checkbox" /> Старший
         </label>
       </div>
 
-      {/* Salary Range */}
+      {/* Уровень зарплаты */}
       <div className="mb-4">
-        <h3 className="font-semibold">Salary Range</h3>
+        <h3 className="font-semibold">Уровень зарплаты</h3>
         <label className="block">
-          <input type="radio" name="salary" /> Any
+          <input type="radio" name="salary" /> Любой
         </label>
         <label className="block">
           <input type="radio" name="salary" /> 80,000 - 165,000 ₽
@@ -62,6 +61,7 @@ const Sidebar: React.FC = () => {
           <input type="radio" name="salary" /> 415,000+ ₽
         </label>
       </div>
+      <button className="bg-blue-500 text-white px-4 py-2 mt-4">Применить</button>
     </aside>
   );
 };

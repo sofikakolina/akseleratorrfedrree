@@ -4,11 +4,15 @@ import Sidebar from '../components/Sidebar';
 import JobList from '../components/JobList';
 
 // Dummy data for jobs
-const jobs = [
-  { id: 1, title: 'Junior Developer', company: 'Company A', location: 'Moscow', salary: '75,000 - 130,000 ₽' },
-  { id: 2, title: 'Fullstack Developer', company: 'Company B', location: 'Moscow', salary: '100,000 - 120,000 ₽' },
-  // Add more jobs as needed
+const jobData = [
+  { id: 1, title: 'Frontend Developer', company: 'Компания A', location: 'Нью-Йорк, NY', salary: 100000, category: 'удаленная' },
+  { id: 2, title: 'Backend Developer', company: 'Компания B', location: 'Сан-Франциско, CA', salary: 120000, category: 'удаленная' },
+  { id: 3, title: 'Маркетолог', company: 'Компания C', location: 'Лос-Анджелес, CA', salary: 90000, category: 'маркетинг' },
+  { id: 4, title: 'Строитель', company: 'Компания D', location: 'Хьюстон, TX', salary: 70000, category: 'строительство' },
+  { id: 5, title: 'Менеджер по продажам', company: 'Компания E', location: 'Чикаго, IL', salary: 80000, category: 'частично-удаленная' },
+  // Добавьте больше вакансий по необходимости
 ];
+
 
 export default function Home() {
   return (
@@ -21,7 +25,12 @@ export default function Home() {
 
       <main className="container mx-auto flex mt-4">
         <Sidebar />
-        <JobList jobs={jobs} />
+        <div className="flex w-full items-center p-5 gap-5" style={{flexDirection:"column", padding:"15px", gap:"20px"}}>
+          <div>
+            <h1 className='font-bold text-2xl'>Ваши рекомендованные вакансии</h1>
+          </div>
+          <JobList jobs={jobData} />
+        </div>
       </main>
     </div>
   );

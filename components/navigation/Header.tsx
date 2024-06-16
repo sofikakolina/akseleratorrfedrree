@@ -1,13 +1,17 @@
-// components/Header.tsx
 import React from 'react';
+import Link from 'next/link';
 
 const Header: React.FC = () => {
   return (
-    <header className="bg-gray-800 p-4 text-white">
-      <div className="container mx-auto flex justify-between items-center">
-        <div className="text-2xl">Job Search</div>
-        <button className="bg-green-500 px-4 py-2 rounded">Login</button>
+    <header className="bg-gray-800 p-4 text-white flex justify-between items-center">
+      <div>
+        <Link href="/" className="text-2xl font-bold">Job Portal</Link>
       </div>
+      <nav>
+        <Link href="/" className="mr-4">Главная</Link>
+        <Link href="/jobs" className="mr-4">Все вакансии</Link>
+        <Link href="/resume" className="mr-4">Резюме</Link>
+      </nav>
     </header>
   );
 };

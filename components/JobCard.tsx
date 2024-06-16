@@ -1,5 +1,4 @@
 import React from 'react';
-import Link from 'next/link';
 
 interface Job {
   id: number;
@@ -15,15 +14,13 @@ interface JobCardProps {
 
 const JobCard: React.FC<JobCardProps> = ({ job }) => {
   return (
-    <Link href={`/job/${job.id}`}>
-      <div className="block border p-4 mb-4 hover:bg-gray-100">
-        <h3 className="text-xl font-bold">{job.title}</h3>
-        <p className="text-gray-600">{job.company}</p>
-        <p className="text-gray-600">{job.location}</p>
-        <p className="text-gray-600">{job.salary}</p>
-        <button className="bg-green-500 text-white px-4 py-2 mt-2">Apply</button>
-      </div>
-    </Link>
+    <div className="border p-4 mb-4 hover:shadow-lg transition-shadow duration-200 rounded-lg">
+      <h3 className="text-xl font-bold">{job.title}</h3>
+      <p className="text-gray-600">{job.company}</p>
+      <p className="text-gray-600">{job.location}</p>
+      <p className="text-gray-600">{job.salary}</p>
+      <button className="bg-green-500 text-white px-4 py-2 mt-4">Подробнее</button>
+    </div>
   );
 };
 

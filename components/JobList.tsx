@@ -1,5 +1,6 @@
 import React from 'react';
 import JobCard from './JobCard';
+import Link from 'next/dist/client/link';
 
 interface Job {
   id: number;
@@ -15,9 +16,11 @@ interface JobListProps {
 
 const JobList: React.FC<JobListProps> = ({ jobs }) => {
   return (
-    <div className="w-3/4 bg-white p-4">
+    <div className="w-full bg-white p-4 rounded-lg">
       {jobs.map((job) => (
-        <JobCard key={job.id} job={job} />
+        <Link key={job.id} href={`/job/${job.id}`}>
+          <JobCard key={job.id} job={job} />
+        </Link>
       ))}
     </div>
   );
